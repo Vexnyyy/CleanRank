@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CleanRank — Prototipe Aplikasi Manajemen Sampah Terpilah</title>
+  <!-- Font Inter untuk tipografi modern dan mudah dibaca -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <header class="demo-topbar">
+    <div class="demo-topbar-inner">
+      <div class="demo-brand-row">
+        <div class="demo-brand">
+          <div class="brand-icon-box" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+              <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/>
+              <path d="m14 16-3 3 3 3"/>
+              <path d="M8.293 13.596 7.196 9.5 3.1 10.598"/>
+              <path d="m9.344 5.811 1.093-1.892A1.83 1.83 0 0 1 11.985 3a1.784 1.784 0 0 1 1.546.888l3.943 6.843"/>
+              <path d="m13.378 9.633 4.096 1.098 1.097-4.096"/>
+            </svg>
+          </div>
+          <span class="brand-title">CleanRank</span>
+          <span class="brand-badge">HTML5 Prototype</span>
+        </div>
+        <button type="button" class="btn-reset" onclick="resetSimulation()" title="Kembalikan data ke kondisi awal">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          <span>Reset Simulasi</span>
+        </button>
+      </div>
+
+      <nav class="role-switcher" aria-label="Pilih Peran Pengguna">
+        <button type="button" id="role-btn-warga" class="role-btn active" onclick="setRole('warga')">
+          1. Warga (5 Rumah)
+        </button>
+        <button type="button" id="role-btn-petugas" class="role-btn" onclick="setRole('petugas')">
+          2. Petugas Lapangan
+        </button>
+        <button type="button" id="role-btn-warung" class="role-btn" onclick="setRole('warung')">
+          3. Mitra Warung
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TOAST NOTIFICATION AREA -->
+  <div id="toast-root" class="toast-container" aria-live="polite"></div>
+
+  <!-- MOBILE VIEWPORT SHELL -->
+  <main id="app-viewport" class="phone-viewport"></main>
+
+  <!-- MODAL ROOT CONTAINER -->
+  <div id="modal-root"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
